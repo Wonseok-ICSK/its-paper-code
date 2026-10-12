@@ -1,5 +1,7 @@
 # ITS Traffic Analysis Code
 
+This code was developed for a research paper intended for submission to [The Korean Society of Intelligent Transport Systems (한국ITS학회)](https://www.kits.or.kr/).
+
 Research scripts for analyzing vehicle trajectories, slow vehicles, truck ratios, headway, speed and delay in highD-style highway recordings.
 
 ## Where to start

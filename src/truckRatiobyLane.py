@@ -1,3 +1,5 @@
+# Compute lane-level truck and car counts and export their ratios.
+# Input/output paths and recording selections are local research settings.
 import csv
 import matplotlib.pyplot as plt
 import pandas as pd

@@ -1,3 +1,5 @@
+# Inspect recording metadata to identify the recording/site mapping.
+# Input/output paths and recording selections are local research settings.
 import csv
 
 for idx in range(10,61):

@@ -1,3 +1,5 @@
+# Compare smoothed cumulative-count curves across observation sections.
+# Input/output paths and recording selections are local research settings.
 """
 row 0 : frame(time)
 row 1 : 차량 id

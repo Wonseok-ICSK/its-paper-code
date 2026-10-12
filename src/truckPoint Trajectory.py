@@ -1,3 +1,5 @@
+# Plot trajectories with distinct styling for truck observations.
+# Input/output paths and recording selections are local research settings.
 # Truck의 색상을 달리한 Traj 생성
 
 import matplotlib.pyplot as plt

@@ -1,3 +1,5 @@
+# Plot truck speed observations by recording and lane.
+# Input/output paths and recording selections are local research settings.
 import csv
 
 import matplotlib.pyplot as plt

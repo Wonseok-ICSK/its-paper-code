@@ -1,3 +1,5 @@
+# Prepare direction-specific trajectory data and apply the shared analysis helpers.
+# Input/output paths and recording selections are local research settings.
 """
 일단 해당 코드에서 해야할 일!
 1. csv 파일을 읽어 적절한 Data Frame으로 변환하여 사용하여야 함

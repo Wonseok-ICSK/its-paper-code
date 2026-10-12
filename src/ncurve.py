@@ -1,3 +1,5 @@
+# Build cumulative vehicle-count curves for the selected detector positions.
+# Input/output paths and recording selections are local research settings.
 import matplotlib.pyplot as plt
 import csv
 

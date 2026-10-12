@@ -1,3 +1,5 @@
+# Generate continuous trajectory plots for each selected recording and lane.
+# Input/output paths and recording selections are local research settings.
 # 전체 Traj 생성
 
 import matplotlib.pyplot as plt

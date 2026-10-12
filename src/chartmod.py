@@ -1,3 +1,5 @@
+# Write a subsampled CSV by keeping alternating rows.
+# Input/output paths and recording selections are local research settings.
 import csv
 
 def remove_odd_rows(input_file, output_file):

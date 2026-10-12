@@ -1,3 +1,5 @@
+# Integrate the difference between cumulative count curves for a delay experiment.
+# Input/output paths and recording selections are local research settings.
 import matplotlib.pyplot as plt
 from scipy import integrate
 import csv
@@ -85,7 +87,7 @@ for idx in tqdm(tracks, desc='Progress '):
 
   diffBtAandC0 = [max(0, x) for x in diffBtAandC]
 
-  result = integrate.trapz(diffBtAandC0)
+  result = integrate.trapezoid(diffBtAandC0)
 
   plt.figure(figsize=(20, 12), dpi=200)
 

@@ -1,3 +1,5 @@
+# Aggregate per-frame lane occupancy by recording and direction.
+# Input/output paths and recording selections are local research settings.
 # import pandas as pd
 # from tqdm import tqdm
 

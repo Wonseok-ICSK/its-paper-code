@@ -1,3 +1,5 @@
+# Estimate and plot vehicle flow past the configured observation position.
+# Input/output paths and recording selections are local research settings.
 # flow graph 그리기
 
 import matplotlib.pyplot as plt

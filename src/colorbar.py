@@ -1,3 +1,5 @@
+# Plot trajectories using the manually defined speed-color palette.
+# Input/output paths and recording selections are local research settings.
 import matplotlib.pyplot as plt
 import csv
 

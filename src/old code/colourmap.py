@@ -1,3 +1,5 @@
+# Historical trajectory plotting variant using a discrete color map.
+# Input/output paths and recording selections are local research settings.
 import matplotlib.pyplot as plt
 import csv
 import json

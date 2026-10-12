@@ -1,3 +1,5 @@
+# Extract trajectory records for subsequent plotting/analysis experiments.
+# Input/output paths and recording selections are local research settings.
 import matplotlib.pyplot as plt
 import csv
 from tqdm import tqdm

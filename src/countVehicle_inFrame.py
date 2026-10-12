@@ -1,3 +1,5 @@
+# Count distinct visible vehicles at sampled frames and plot the time series.
+# Input/output paths and recording selections are local research settings.
 # 하나의 Frame에서 관측 가능한 차량의 수 count
 # todo, 저속차량을 식별해서 count
 # + ratio 도 같이 표시
@@ -23,7 +25,8 @@ for track in tqdm(tracks, desc='Progress '):
     data = csv.reader(csvfile)
 
     for row in data:
-      max_frame = int(row[4])
+      # Metadata rows are not guaranteed to be sorted by final frame.
+      max_frame = max(max_frame, int(row[4]))
 
   sec = 0
   count_vehicle = []

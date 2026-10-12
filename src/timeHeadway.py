@@ -1,3 +1,5 @@
+# Compare time headway observations by vehicle class and recording.
+# Input/output paths and recording selections are local research settings.
 # track 별 차량 / 트럭의 평균 headway를 구하는 방법 => 이거 ttc 같은 지표를 확인해볼까?
 # dhw가 distance headway(m)로 앞차와의 거리를 나타내는 지표임. thw(s, 13)는 time으로 상대적인 시간을 나타냄. 
 # 특정 Frame 에서 앞 차와의 거리. 앞 idx 와의 거리?

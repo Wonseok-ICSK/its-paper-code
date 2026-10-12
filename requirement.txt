@@ -1,6 +1,6 @@
-# Baseline compatibility list; not an exact lockfile of the research environment.
+# Import-derived dependencies; not an exact lockfile of the research environment.
 numpy
 pandas
 matplotlib
-scipy<1.14
+scipy>=1.6
 tqdm

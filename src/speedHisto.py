@@ -1,3 +1,5 @@
+# Plot speed distributions and car/truck comparisons for each recording.
+# Input/output paths and recording selections are local research settings.
 import csv
 import matplotlib.pyplot as plt
 import numpy as np

@@ -21,7 +21,7 @@ Research scripts for analyzing vehicle trajectories, slow vehicles, truck ratios
 python -m pip install -r requirement.txt
 ```
 
-The baseline dependency list constrains SciPy below 1.14 because the unchanged scripts use `scipy.integrate.trapz`. It is an inferred compatibility constraint, not the exact original environment. Python 3.9-3.12 is a practical baseline environment for this legacy SciPy constraint; the source was syntax-checked separately with Python 3.13.
+The current code uses `scipy.integrate.trapezoid` (SciPy >=1.6). The `phase1-original` tag retains the legacy `trapz` calls and its SciPy <1.14 compatibility constraint. The requirements are inferred from source rather than recovered from the original research environment. Synthetic helper tests passed with Python 3.13 and SciPy 1.16.3.
 
 Datasets and generated figures/CSV files are deliberately not uploaded. Supply your authorized dataset separately. Scripts expect files such as `{recording}_tracks.csv`, `{recording}_tracksMeta.csv` and `{recording}_recordingMeta.csv`. Core columns include `id`, `frame`, `laneId`, `xVelocity`, neighbor IDs and headway fields; per-script requirements differ.
 
@@ -33,10 +33,14 @@ The original nested `.git` directory is not uploaded. This repository starts a n
 
 Frame/time units (many scripts assume 25 fps), lane/direction conventions, missing neighbor observations, denominators, index alignment, dataset paths and plot/output units. Research thresholds and scientific interpretations are retained; reproducing the paper requires the original data and methodology review.
 
+## Second-pass update
+
+See [REVIEW_CHANGES.md](REVIEW_CHANGES.md) for the exact corrections, test commands, results and remaining limitations. The current `main` branch contains this update; `phase1-original` preserves the first upload.
+
 ## Review history
 
 - `phase1-original`: the selected source files were imported byte for byte; only repository documentation, dependency lists and Git housekeeping files were added.
-- A subsequent update adds English review comments and narrowly scoped fixes. Compare it with `phase1-original` to review the changes.
+- The `phase2-reviewed` update adds English review comments and narrowly scoped fixes (comments only for the CRC experiment). Compare it with `phase1-original` to review the changes.
 - Original directory names and sample variants are retained. Source extracted from top-level ZIP files is under `archived-examples/` when present.
 - Build outputs, local IDE state, packet captures, datasets, model weights and generated analysis results are excluded. This is a source review repository, not a complete runtime distribution.
 

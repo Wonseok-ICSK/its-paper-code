@@ -1,3 +1,5 @@
+# Historical trajectory plotting variant using continuous color normalization.
+# Input/output paths and recording selections are local research settings.
 import matplotlib.pyplot as plt
 import matplotlib.colors as mcolors 
 import csv

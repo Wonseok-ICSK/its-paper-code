@@ -1,3 +1,5 @@
+# Filter trajectory CSV files to vehicle IDs classified as trucks in metadata.
+# Input/output paths and recording selections are local research settings.
 import pandas as pd
 import csv
 

@@ -1,3 +1,5 @@
+# Compare selected vehicle observations with truck metadata across recordings.
+# Input/output paths and recording selections are local research settings.
 import csv
 import pandas as pd
 from tqdm import tqdm

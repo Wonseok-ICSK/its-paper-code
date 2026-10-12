@@ -1,3 +1,5 @@
+# Integrate differences between cumulative detector counts for selected recordings.
+# Input/output paths and recording selections are local research settings.
 # 사실 속도가 아니고, Lane 별로 구분해도 되지 않나 싶기는 함. 
 # 뭐 여기까지 왔는걸 어째
 
@@ -91,7 +93,7 @@ for idx in tqdm(tracks, desc='Progress '):
 
   diffBtAandC0 = np.cumsum(diffBtAandC0)
 
-  result = integrate.trapz(diffBtAandC0)
+  result = integrate.trapezoid(diffBtAandC0)
 
   plt.figure(figsize=(20, 12), dpi=200)
 

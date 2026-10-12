@@ -1,3 +1,5 @@
+# Plot selected vehicle trajectories from recording CSV data.
+# Input/output paths and recording selections are local research settings.
 ##
 # ID를 입력하면 해당 ID를 그려주는 코드
 ##

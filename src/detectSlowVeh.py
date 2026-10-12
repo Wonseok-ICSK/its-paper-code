@@ -1,3 +1,5 @@
+# Identify candidate slow vehicles and visualize their trajectories by lane.
+# Input/output paths and recording selections are local research settings.
 # idea : 해당 Lane 별 기대속도를 구하고, 기대속도 대비 10% 이상 낮은 차량 중, 선두에 있는 차량을 저속차량으로 분류
 # 그러니까, 예를 들어 두 대가 연속으로 서행중이라면, 선두 차량만 저속차량으로 구분하고, 뒤 따르는 차량은 후속차량으로 분류
 # 대신 뒤의 차는 ?

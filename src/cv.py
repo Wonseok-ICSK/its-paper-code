@@ -1,3 +1,5 @@
+# Shared trajectory-analysis helpers for counts, delay, headway and slow vehicles.
+# Frame indices and physical time must be distinguished by each caller.
 import time
 import matplotlib.pyplot as plt
 import pandas as pd
@@ -55,7 +57,7 @@ def measureDelay(startTime, endTime, graphA, graphB):
   diff = graphA_clipped - graphB_clipped
 
   # Integrate the clipped difference using trapezoidal rule
-  totalDelay = integrate.trapz(diff)
+  totalDelay = integrate.trapezoid(diff)
 
   return totalDelay
 
@@ -215,7 +217,7 @@ def detectSlowVeh(data: pd.DataFrame):
   print(f'd, elapsed time : {t_time - time.time()}')
   t_time = time.time()
   for id, idx in idx_dict.items():
-    if len(c_veh_spd[idx]) != 0 and len(p_veh_spd) != 0:
+    if len(c_veh_spd[idx]) != 0 and len(p_veh_spd[idx]) != 0:
       mean_diff = sum(veh_spd_diff[idx]) / len(veh_spd_diff[idx])
       if len(side_veh_spd_diff[idx]) != 0:
         mean_s_diff = sum(side_veh_spd_diff[idx]) / len(side_veh_spd_diff[idx])
@@ -223,6 +225,9 @@ def detectSlowVeh(data: pd.DataFrame):
         mean_s_diff = -1
         
       mean_p_vel = sum(p_veh_spd[idx]) / len(p_veh_spd[idx])
+      # A speed ratio is undefined for a stationary preceding vehicle.
+      if mean_p_vel == 0:
+        continue
 
       prec_spd_ratio = mean_diff / mean_p_vel
       side_spd_ratio = mean_s_diff / mean_p_vel if mean_s_diff != -1 else -1
@@ -289,10 +294,13 @@ def detectSlowVehPandas(data: pd.DataFrame):
   h_idx = []
 
   for id, idx in idx_dict.items():
-    if len(c_veh_spd[idx]) != 0 and len(p_veh_spd) != 0:
+    if len(c_veh_spd[idx]) != 0 and len(p_veh_spd[idx]) != 0:
       mean_diff = sum(veh_spd_diff[idx]) / len(veh_spd_diff[idx])
       mean_s_diff = sum(side_veh_spd_diff[idx]) / len(side_veh_spd_diff[idx]) if len(side_veh_spd_diff[idx]) != 0 else -1
       mean_p_vel = sum(p_veh_spd[idx]) / len(p_veh_spd[idx])
+      # A speed ratio is undefined for a stationary preceding vehicle.
+      if mean_p_vel == 0:
+        continue
 
       prec_spd_ratio = mean_diff / mean_p_vel
       side_spd_ratio = mean_s_diff / mean_p_vel if mean_s_diff != -1 else -1

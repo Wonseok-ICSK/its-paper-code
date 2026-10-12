@@ -1,3 +1,5 @@
+# Historical space-time plotting variant for a selected frame interval.
+# Input/output paths and recording selections are local research settings.
 """
 row 0 : frame(time)
 row 1 : 차량 id

@@ -1,0 +1,6 @@
+# Baseline compatibility list; not an exact lockfile of the research environment.
+numpy
+pandas
+matplotlib
+scipy<1.14
+tqdm

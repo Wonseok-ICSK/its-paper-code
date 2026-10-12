@@ -1,0 +1,16 @@
+1. N-curve 상에서 지체가 관측되는 구간을 육안으로 확인 후 해당 구간의 total delay(sec*veh), avg delay(sec)를 계산
+    a) 우선, 시작점 종료점을 입력하면 해당 구간의 delay를 구하는 프로그램 필요 --> 그 cummulative 코드 활용
+    b) total delay의 단위는 veh*sec 이고 이를 해당 구간의 차량 수로 나누면 avg delay(평균 지체)가 되며 단위는 sec.
+    c) n-curve상 선의 굵기를 좀 더 키워보자. 
+  
+2. 각 Lane과 각 Lane의 세 구간(50, 200, 350)에 대해 Traffic Measurements 표 생성
+    Time headway(sec), Space headway(m), Flow rate(veh/h) --> 결국 이게 count vehicle 값이네?, 평균 속도(km/h), LC(가능하면)
+
+3. 임의로 선택한 일반 속도 차량과 Slow Vehicle을 Leader Vehicle로 정의하고  이로 인해 3초, 6초, 9초의 후속 교통류를 평가
+    --> 2번 활용
+
+4. slow vehicle의 출연 시점 위치 분포 시각화(이건 솔직히 어떻게 해야할지 모르겠음)
+
+5. countVehicle은 방향 별로 별도로 계산할 것
+
+6. 저속차량과 delay 발생에 대한 상관관계 규명(p-value)
